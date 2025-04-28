@@ -15,11 +15,11 @@ A análise foi realizada em Python, usando **Jupyter Notebook** e bibliotecas co
 
 ## Propósito da Análise
 O objetivo é identificar a loja com menor desempenho e recomendar sua venda, analisando:
-- **Faturamento**: Receita por loja, estado e tipo de pagamento.
-- **Vendas por categoria**: Distribuição e faturamento por categoria.
-- **Avaliações**: Satisfação média dos clientes.
-- **Produtos mais/menos vendidos**: Padrões de demanda.
-- **Custos de frete**: Impacto logístico.
+- **Faturamento**
+- **Vendas por categoria**
+- **Avaliações**
+- **Produtos mais/menos vendidos**
+- **Custos de frete**
 
 ## Estrutura do Projeto
 
@@ -67,7 +67,7 @@ Faturamento total por loja **(2020–2023)**:
 | Loja 1    | 1.616.347,09     |
 | Loja 2    | 1.567.773,22     |
 | Loja 3    | 1.542.047,69     |
-| **Loja 4**|**1.458.253,46**  |
+> | **Loja 4**|**1.458.253,46**  |
 
 **Por Estado (Loja 4)**:
 
@@ -77,7 +77,7 @@ Faturamento total por loja **(2020–2023)**:
 | RJ              | 179.151,26       |
 | MG              | 174.715,71       |
 | ...             | ...              |
-| **Total Loja 4**| **1.458.253,46** |
+> | **Total Loja 4**| **1.458.253,46** |
 
 **Por Tipo de Pagamento** (todas as lojas):
 
@@ -103,7 +103,7 @@ Distribuição de vendas e faturamento por categoria (Loja 4):
 | Utilidades Domésticas    | 201    | 21.237,76        | 8.52            |
 | Livros                   | 187    | 13.148,81        | 7.93            |
 | Instrumentos Musicais    | 170    | 105.408,35       | 7.21            |
-| **Total**                | **2358**| **1.458.253,46** | **100.00**     |
+> | **Total**                | **2358**| **1.458.253,46** | **100.00**     |
 
 **Insight**: Móveis e eletrônicos lideram, mas a Loja 4 não se destaca.
 
@@ -115,7 +115,7 @@ Média das avaliações dos clientes (escala 0–5):
 | Loja 1 | 3.98            |
 | Loja 2 | 4.04            |
 | Loja 3 | 4.05            |
-| Loja 4 | 4.00            |
+> | Loja 4 | 4.00            |
 
 **Insight**: A Loja 4 tem avaliação satisfatória.
 
@@ -138,12 +138,12 @@ Média das avaliações dos clientes (escala 0–5):
 ### 6. Frete Médio
 Custo médio de frete por loja:
 
-| Loja   | Frete Médio (R$) |
-|--------|------------------|
-| Loja 1 | 34,69            |
-| Loja 2 | 33,62            |
-| Loja 3 | 33,07            |
-| Loja 4 | 31,28            |
+| Loja       | Frete Médio (R$) |
+|------------|------------------|
+| Loja 1     | 34,69            |
+| Loja 2     | 33,62            |
+| Loja 3     | 33,07            |
+> |**Loja 4**| **31,28**        |
 
 **Por Estado (Loja 4)**:
 
@@ -153,7 +153,7 @@ Custo médio de frete por loja:
 | MA              | 45,66            | 0,00              | 184,78            | 19              |
 | PA              | 44,96            | 0,00              | 170,90            | 17              |
 | ...             | ...              | ...               | ...               | ...             |
-| **Média Loja 4**| **31,28**        | -                 | -                 | **2358**        |
+> | **Média Loja 4**| **31,28**        | -                 | -                 | **2358**        |
 
 **Insight**: A Loja 4 tem o menor frete médio, mas isso não compensa o baixo faturamento.
 
