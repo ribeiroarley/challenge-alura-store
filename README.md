@@ -57,17 +57,17 @@ O objetivo é identificar a loja com menor desempenho e recomendar sua venda, an
 ## Resultados
 
 ### 1. Importação dos Dados
-Os dados foram organizados a partir de CSVs no GitHub, com estrutura consistente entre lojas. A visualização inicial com `tabulate` confirmou a integridade dos dados.
+Os dados foram organizados a partir de CSVs no GitHub, com estrutura consistente entre lojas.
 
 ### 2. Análise do Faturamento
-Faturamento total por loja (2020–2023):
+Faturamento total por loja **(2020–2023)**:
 
-| Loja   | Faturamento (R$) |
-|--------|------------------|
-| Loja 1 | 1.616.347,09     |
-| Loja 2 | 1.567.773,22     |
-| Loja 3 | 1.542.047,69     |
-| Loja 4 | 1.458.253,46     |
+| Loja      | Faturamento (R$) |
+|-----------|------------------|
+| Loja 1    | 1.616.347,09     |
+| Loja 2    | 1.567.773,22     |
+| Loja 3    | 1.542.047,69     |
+| **Loja 4**|**1.458.253,46**  |
 
 **Por Estado (Loja 4)**:
 
@@ -88,7 +88,7 @@ Faturamento total por loja (2020–2023):
 | Cupom               | 331.304,44       |
 | Cartão de Débito    | 79.310,39        |
 
-**Insight**: A Loja 4 tem o menor faturamento, com desempenho inferior em estados-chave. O cartão de crédito predomina, mas não diferencia a Loja 4.
+**Insight**: A Loja 4 tem o menor faturamento, com desempenho inferior em estados-chave: SP, RJ e MG. O cartão de crédito predomina, mas não diferencia a Loja 4.
 
 ### 3. Vendas por Categoria
 Distribuição de vendas e faturamento por categoria (Loja 4):
@@ -105,7 +105,7 @@ Distribuição de vendas e faturamento por categoria (Loja 4):
 | Instrumentos Musicais    | 170    | 105.408,35       | 7.21            |
 | **Total**                | **2358**| **1.458.253,46** | **100.00**     |
 
-**Insight**: Móveis e eletrônicos lideram, mas a Loja 4 não se destaca em nenhuma categoria.
+**Insight**: Móveis e eletrônicos lideram, mas a Loja 4 não se destaca.
 
 ### 4. Média de Avaliação
 Média das avaliações dos clientes (escala 0–5):
@@ -117,10 +117,9 @@ Média das avaliações dos clientes (escala 0–5):
 | Loja 3 | 4.05            |
 | Loja 4 | 4.00            |
 
-**Insight**: A Loja 4 tem avaliação satisfatória, mas inferior às Lojas 2 e 3.
+**Insight**: A Loja 4 tem avaliação satisfatória.
 
-### 5. Produtos Mais e Menos Vendidos
-Exemplo para Loja 4:
+### 5. Produtos Mais e Menos Vendidos: Loja 4
 
 | Destaque       | Produto                     | Vendas | Faturamento (R$) | Porcentagem (%) |
 |----------------|-----------------------------|--------|------------------|-----------------|
@@ -134,7 +133,7 @@ Exemplo para Loja 4:
 | SP    | Mais Vendido   | Carrinho controle remoto    | 104    | 10.387,06        | 32.3            |
 | SP    | Menos Vendido  | Headset                     | 57     | 11.150,45        | 53.8            |
 
-**Insight**: A Loja 4 não se destaca em produtos específicos, com padrões semelhantes às demais.
+**Insight**: A Loja 4 não se destaca.
 
 ### 6. Frete Médio
 Custo médio de frete por loja:
