@@ -62,12 +62,12 @@ Os dados foram organizados a partir de CSVs no GitHub, com estrutura consistente
 ### 2. Análise do Faturamento
 Faturamento total por loja **(2020–2023)**:
 
-| Loja      | Faturamento (R$) |
-|-----------|------------------|
-| Loja 1    | 1.616.347,09     |
-| Loja 2    | 1.567.773,22     |
-| Loja 3    | 1.542.047,69     |
-> | **Loja 4**|**1.458.253,46**  |
+| Loja      | Faturamento (R$)  |
+|-----------|-------------------|
+| Loja 1    | 1.616.347,09      |
+| Loja 2    | 1.567.773,22      |
+| Loja 3    | 1.542.047,69      |
+| **Loja 4**| **1.458.253,46**  |
 
 **Por Estado (Loja 4)**:
 
@@ -77,7 +77,7 @@ Faturamento total por loja **(2020–2023)**:
 | RJ              | 179.151,26       |
 | MG              | 174.715,71       |
 | ...             | ...              |
-> | **Total Loja 4**| **1.458.253,46** |
+| **Total Loja 4**| **1.458.253,46** |
 
 **Por Tipo de Pagamento** (todas as lojas):
 
@@ -93,29 +93,29 @@ Faturamento total por loja **(2020–2023)**:
 ### 3. Vendas por Categoria
 Distribuição de vendas e faturamento por categoria (Loja 4):
 
-| Categoria                | Vendas | Faturamento (R$) | Porcentagem (%) |
-|--------------------------|--------|------------------|-----------------|
-| Móveis                   | 480    | 270.352,16       | 20.36           |
-| Eletrônicos              | 451    | 575.071,18       | 19.13           |
-| Brinquedos               | 338    | 28.498,67        | 14.33           |
-| Esporte e Lazer          | 277    | 46.825,77        | 11.75           |
-| Eletrodomésticos         | 254    | 397.710,75       | 10.77           |
-| Utilidades Domésticas    | 201    | 21.237,76        | 8.52            |
-| Livros                   | 187    | 13.148,81        | 7.93            |
-| Instrumentos Musicais    | 170    | 105.408,35       | 7.21            |
-> | **Total**                | **2358**| **1.458.253,46** | **100.00**     |
+| Categoria                | Vendas  | Faturamento (R$) | Porcentagem (%) |
+|--------------------------|---------|------------------|-----------------|
+| Móveis                   | 480     | 270.352,16       | 20.36           |
+| Eletrônicos              | 451     | 575.071,18       | 19.13           |
+| Brinquedos               | 338     | 28.498,67        | 14.33           |
+| Esporte e Lazer          | 277     | 46.825,77        | 11.75           |
+| Eletrodomésticos         | 254     | 397.710,75       | 10.77           |
+| Utilidades Domésticas    | 201     | 21.237,76        | 8.52            |
+| Livros                   | 187     | 13.148,81        | 7.93            |
+| Instrumentos Musicais    | 170     | 105.408,35       | 7.21            |
+| **Total**                | **2358**| **1.458.253,46** | **100.00**      |
 
 **Insight**: Móveis e eletrônicos lideram, mas a Loja 4 não se destaca.
 
 ### 4. Média de Avaliação
 Média das avaliações dos clientes (escala 0–5):
 
-| Loja   | Avaliação Média |
-|--------|-----------------|
-| Loja 1 | 3.98            |
-| Loja 2 | 4.04            |
-| Loja 3 | 4.05            |
-> | Loja 4 | 4.00            |
+| Loja       | Avaliação Média |
+|------------|-----------------|
+| Loja 1     | 3.98            |
+| Loja 2     | 4.04            |
+| Loja 3     | 4.05            |
+| **Loja 4** | **4.00**        |
 
 **Insight**: A Loja 4 tem avaliação satisfatória.
 
@@ -143,7 +143,7 @@ Custo médio de frete por loja:
 | Loja 1     | 34,69            |
 | Loja 2     | 33,62            |
 | Loja 3     | 33,07            |
-> |**Loja 4**| **31,28**        |
+| **Loja 4**  | **31,28**       |
 
 **Por Estado (Loja 4)**:
 
@@ -153,7 +153,7 @@ Custo médio de frete por loja:
 | MA              | 45,66            | 0,00              | 184,78            | 19              |
 | PA              | 44,96            | 0,00              | 170,90            | 17              |
 | ...             | ...              | ...               | ...               | ...             |
-> | **Média Loja 4**| **31,28**        | -                 | -                 | **2358**        |
+| **Média Loja 4**| **31,28**        | -                 | -                 | **2358**        |
 
 **Insight**: A Loja 4 tem o menor frete médio, mas isso não compensa o baixo faturamento.
 
