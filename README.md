@@ -1,199 +1,217 @@
-# Análise de Vendas da Allure Store
+# Análise de Vendas da Alura Store
+
+---
 
 ## Introdução
-Este projeto analisa dados de vendas de quatro lojas da Alura Store para ajudar o Senhor João a decidir qual loja vender e financiar um novo empreendimento. 
+Eu sou **Arley Ribeiro**, Analista de Dados, e este relatório avalia o desempenho de quatro lojas do Sr. João, de 2020 a 2023, para recomendar qual deve ser vendida. A análise considera cinco métricas:
 
-Utilizando Python no Jupyter Notebook, a análise avalia:
+- *Faturamento total*
+- *Vendas por categoria de produto*
+- *Média de avaliações dos clientes*
+- *Produtos mais e menos vendidos*
+- *Custo médio de frete*
 
-- Faturamento
-- Vendas por categoria
-- Avaliações de clientes
-- Custos de frete
-- Produtos mais e menos vendidos  
-
-Tabelas e gráficos são gerados para apoiar a tomada de decisão.
-
----
+A análise foi realizada em Python, usando **Jupyter Notebook** e bibliotecas como `pandas`, `matplotlib`, `seaborn` e `tabulate`.
 
 ## Propósito da Análise
-O objetivo principal é identificar a loja com menor desempenho financeiro e recomendar sua venda. A análise contempla:
-
-- **Faturamento** por loja, cidade e tipo de pagamento
-- **Vendas e faturamento** por categoria de produto
-- **Avaliação média** dos clientes
-- **Custos de frete** por loja e estado
-- **Produtos mais e menos vendidos** por loja e local de compra
-
----
+O objetivo é identificar a loja com menor desempenho e recomendar sua venda, analisando:
+- **Faturamento**: Receita por loja, estado e tipo de pagamento.
+- **Vendas por categoria**: Distribuição e faturamento por categoria.
+- **Avaliações**: Satisfação média dos clientes.
+- **Produtos mais/menos vendidos**: Padrões de demanda.
+- **Custos de frete**: Impacto logístico.
 
 ## Estrutura do Projeto
 
-O repositório contém:
-
-- `Challenge_AluraStoreBr.ipynb`: Notebook com código de análise, importação de dados, cálculos, tabelas e gráficos.
-- `Readme.md`: Este arquivo, com instruções e detalhes.
+- `Challenge_AluraStoreBr.ipynb`: Notebook com código, cálculos, tabelas e gráficos.
+- `README.md`: Este documento, com detalhes do projeto e instruções.
 
 ---
 
-## Dados
+## Metodologia
 
-Cada loja possui registros de vendas:
+### Importação dos Dados
+- Dados carregados de URLs públicas via `pandas.read_csv()`.
+- Adicionada coluna "Loja" para identificar registros.
+- Primeiras cinco linhas de cada loja exibidas com `tabulate`.
 
-- **Registros:** 2.359 por loja (exceto Loja 4 com 2.358 registros)
-- **Colunas:**
-  - Produto
-  - Categoria do Produto
-  - Preço
-  - Frete
-  - Data da Compra
-  - Vendedor
-  - Local da compra
-  - Avaliação da compra
-  - Tipo de pagamento
-  - Quantidade de parcelas
-  - Latitude e longitude
+### Exploração e Análise
+- **Faturamento**: Calculado por loja, estado e tipo de pagamento.
+- **Vendas por categoria**: Distribuição e faturamento por categoria.
+- **Avaliações**: Média das avaliações dos clientes.
+- **Produtos mais/menos vendidos**: Identificação por loja e estado.
+- **Frete**: Custo médio por loja e estado.
 
-**Fontes de dados:**  
-- Loja 1
-- Loja 2
-- Loja 3
-- Loja 4
+### Visualização
+- Gráficos com `matplotlib` e `seaborn` (barras, boxplots).
+- Tabelas formatadas com `tabulate`.
 
----
-
-## Ferramentas Utilizadas
-
-- **pandas:** Manipulação e tratamento dos dados
-- **matplotlib**/**seaborn:** Criação de gráficos
-- **tabulate:** Formatação de tabelas
-- **Jupyter Notebook:** Ambiente interativo de desenvolvimento
-
-**Etapas do notebook:**
-
-- Importação de dados diretamente das URLs
-- Concatenação dos dados (com inclusão da coluna "Loja")
-- Cálculo de faturamento (`Preço + Frete`)
-- Geração de tabelas e gráficos
+### Ferramentas Utilizadas
+- `pandas`: Manipulação de dados.
+- `matplotlib`/`seaborn`: Visualização.
+- `tabulate`: Formatação de tabelas.
+- `Jupyter Notebook`: Ambiente interativo.
 
 ---
 
-## Resultados e Insights
+## Resultados
 
-### Faturamento
-Loja  Faturamento (R$) 
-Loja 1: R$1.616.347,09
-Loja 2: R$1.567.773,22
-Loja 3: R$1.542.047,69
-**Loja 4** **1.458.253,46**
+### 1. Importação dos Dados
+Os dados foram organizados a partir de CSVs no GitHub, com estrutura consistente entre lojas. A visualização inicial com `tabulate` confirmou a integridade dos dados.
 
-> **Insight:** Loja 4 tem o menor faturamento, sendo a principal candidata à venda.
+### 2. Análise do Faturamento
+Faturamento total por loja (2020–2023):
 
----
+| Loja   | Faturamento (R$) |
+|--------|------------------|
+| Loja 1 | 1.616.347,09     |
+| Loja 2 | 1.567.773,22     |
+| Loja 3 | 1.542.047,69     |
+| Loja 4 | 1.458.253,46     |
 
-### Avaliações
+**Por Estado (Loja 4)**:
 
-- Loja 1: 3.98
-- Loja 2: 4.04
-- Loja 3: 4.05
-- Loja 4: 4
+| Local da Compra | Faturamento (R$) |
+|-----------------|------------------|
+| SP              | 588.862,89       |
+| RJ              | 179.151,26       |
+| MG              | 174.715,71       |
+| ...             | ...              |
+| **Total Loja 4**| **1.458.253,46** |
 
+**Por Tipo de Pagamento** (todas as lojas):
 
-> **Insight:** Loja 4 possui boas avaliações, mas não compensa o faturamento inferior.
+| Tipo de Pagamento   | Faturamento (R$) |
+|---------------------|------------------|
+| Cartão de Crédito   | 4.537.242,96     |
+| Boleto              | 1.236.563,66     |
+| Cupom               | 331.304,44       |
+| Cartão de Débito    | 79.310,39        |
 
----
+**Insight**: A Loja 4 tem o menor faturamento, com desempenho inferior em estados-chave. O cartão de crédito predomina, mas não diferencia a Loja 4.
 
-### Custos de Frete
+### 3. Vendas por Categoria
+Distribuição de vendas e faturamento por categoria (Loja 4):
 
-- Frete Médio Loja 1: R$34,69
-- Frete Médio Loja 2: R$33,62
-- Frete Médio Loja 3: R$33,07
-- Frete Médio Loja 4: R$31,28
+| Categoria                | Vendas | Faturamento (R$) | Porcentagem (%) |
+|--------------------------|--------|------------------|-----------------|
+| Móveis                   | 480    | 270.352,16       | 20.36           |
+| Eletrônicos              | 451    | 575.071,18       | 19.13           |
+| Brinquedos               | 338    | 28.498,67        | 14.33           |
+| Esporte e Lazer          | 277    | 46.825,77        | 11.75           |
+| Eletrodomésticos         | 254    | 397.710,75       | 10.77           |
+| Utilidades Domésticas    | 201    | 21.237,76        | 8.52            |
+| Livros                   | 187    | 13.148,81        | 7.93            |
+| Instrumentos Musicais    | 170    | 105.408,35       | 7.21            |
+| **Total**                | **2358**| **1.458.253,46** | **100.00**     |
 
-> **Insight:** Loja 4 apresenta o menor custo de frete, mas o impacto no faturamento é limitado.
+**Insight**: Móveis e eletrônicos lideram, mas a Loja 4 não se destaca em nenhuma categoria.
 
----
+### 4. Média de Avaliação
+Média das avaliações dos clientes (escala 0–5):
 
-### Categorias de Produto
-- Móveis e eletrônicos representam entre 19% e 21% do faturamento total.
+| Loja   | Avaliação Média |
+|--------|-----------------|
+| Loja 1 | 3.98            |
+| Loja 2 | 4.04            |
+| Loja 3 | 4.05            |
+| Loja 4 | 4.00            |
 
-> **Insight:** Categorias dominantes em todas as lojas.
+**Insight**: A Loja 4 tem avaliação satisfatória, mas inferior às Lojas 2 e 3.
 
----
+### 5. Produtos Mais e Menos Vendidos
+Exemplo para Loja 4:
 
-### Estados
-- **São Paulo**, **Rio de Janeiro**e **Minas Gerais** lideram o faturamento em todas as lojas.
+| Destaque       | Produto                     | Vendas | Faturamento (R$) | Porcentagem (%) |
+|----------------|-----------------------------|--------|------------------|-----------------|
+| Mais Vendido   | Cama box                    | 62     | 46.264,11        | 25.4            |
+| Menos Vendido  | Guitarra                    | 33     | 36.232,51        | 24.8            |
 
-> **Insight:** O mercado é concentrado em grandes centros urbanos.
+**Por Estado (São Paulo)**:
 
----
+| Local | Destaque       | Produto                     | Vendas | Faturamento (R$) | Porcentagem (%) |
+|-------|----------------|-----------------------------|--------|------------------|-----------------|
+| SP    | Mais Vendido   | Carrinho controle remoto    | 104    | 10.387,06        | 32.3            |
+| SP    | Menos Vendido  | Headset                     | 57     | 11.150,45        | 53.8            |
 
-## Gráficos Gerados
+**Insight**: A Loja 4 não se destaca em produtos específicos, com padrões semelhantes às demais.
 
-- Faturamento por loja
-- Faturamento por cidade
-- Faturamento por tipo de pagamento
-- Vendas por categoria
-- Avaliação média por loja
-- Produtos mais e menos vendidos
-- Produtos por local de compra
+### 6. Frete Médio
+Custo médio de frete por loja:
+
+| Loja   | Frete Médio (R$) |
+|--------|------------------|
+| Loja 1 | 34,69            |
+| Loja 2 | 33,62            |
+| Loja 3 | 33,07            |
+| Loja 4 | 31,28            |
+
+**Por Estado (Loja 4)**:
+
+| Local da Compra | Frete Médio (R$) | Frete Mínimo (R$) | Frete Máximo (R$) | Total de Vendas |
+|-----------------|------------------|-------------------|-------------------|-----------------|
+| RO              | 59,67            | 9,38              | 110,57            | 4               |
+| MA              | 45,66            | 0,00              | 184,78            | 19              |
+| PA              | 44,96            | 0,00              | 170,90            | 17              |
+| ...             | ...              | ...               | ...               | ...             |
+| **Média Loja 4**| **31,28**        | -                 | -                 | **2358**        |
+
+**Insight**: A Loja 4 tem o menor frete médio, mas isso não compensa o baixo faturamento.
 
 ---
 
 ## Recomendação Final
-Com base na análise, recomenda-se vender a **Loja 4**, que apresenta:
+Recomendo a **venda da Loja 4** em **janeiro de 2024**, após os picos sazonais de novembro e dezembro (estimativa de faturamento: R$218.738,02). **Justificativa**:
+- Menor faturamento (R$1.458.253,46).
+- Avaliações satisfatórias, mas não excepcionais.
+- Eficiência em frete não compensa a baixa receita.
 
-- Menor faturamento (R$1.458.253,46)
-- Avaliações médias satisfatórias (4,00)
-- Custos de frete competitivos (R$31,28)
-
-No entanto, o desempenho financeiro é o mais fraco entre todas as lojas, cerca de 10% inferior à Loja 1.
+A venda pós-pico sazonal maximiza o valor percebido, destacando a capacidade de receita e categorias principais (móveis e eletrônicos).
 
 ---
 
 ## Instruções para Executar o Projeto
 
-### Pré-requisitos:
-
+### Pré-requisitos
 - Python 3.8+
 - Jupyter Notebook
-- Bibliotecas instaladas: `pandas`, `matplotlib`, `seaborn`, `tabulate`
+- Bibliotecas: `pandas`, `matplotlib`, `seaborn`, `tabulate`
 
-### Passos:
-
-1. **Clone o Repositório:**
+### Passos
+1. Clone o repositório:
    ```bash
    git clone https://github.com/ribeiroarley/challenge-alura-store.git
    cd challenge-alura-store
    ```
 
-2. **Crie e Ative o Ambiente Virtual:**
+2. Crie e ative o ambiente virtual:
    ```bash
    python -m venv venv
    source venv/bin/activate  # Linux/Mac
    venv\Scripts\activate     # Windows
    ```
 
-3. **Instale as Dependências:**
+3. Instale as dependências:
    ```bash
    pip install pandas matplotlib seaborn tabulate jupyter
    ```
 
-4. **Execute o Jupyter Notebook:**
+4. Execute o Jupyter Notebook:
    ```bash
    jupyter notebook
    ```
 
-5. **Abra e execute o arquivo:** `Challenge_AluraStoreBr.ipynb`
+5. Abra e execute `Challenge_AluraStoreBr.ipynb`.
 
-- Dados são carregados automaticamente de URLs públicas.
-- Tabelas são exibidas e gráficos são salvos como PNGs.
+**Notas**:
+- Dados são carregados automaticamente das URLs.
+- Gráficos são salvos como PNGs.
+- Tabelas são exibidas no notebook.
 
----
-
-## Desenvolvido por
+## Desenvolvido por 💼
 **Arley Ribeiro da Silva Xavier**
 
----
+
 
 ## Agradecimentos
-Agradeço à **Oracle Next Education (ONE)** e à **Alura** pela oportunidade e pelo desafio proposto.
+Agradeço à **Oracle Next Education (ONE)** e à **Alura** pelo desafio e oportunidade de aprendizado.
