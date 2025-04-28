@@ -1,7 +1,8 @@
 # Análise de Vendas da Allure Store
 
 ## Introdução
-Este projeto analisa dados de vendas de quatro lojas da Alura Store para ajudar o Senhor João a decidir qual loja vender e financiar um novo empreendimento.  
+Este projeto analisa dados de vendas de quatro lojas da Alura Store para ajudar o Senhor João a decidir qual loja vender e financiar um novo empreendimento. 
+
 Utilizando Python no Jupyter Notebook, a análise avalia:
 
 - Faturamento
@@ -30,18 +31,7 @@ O objetivo principal é identificar a loja com menor desempenho financeiro e rec
 O repositório contém:
 
 - `Challenge_AluraStoreBr.ipynb`: Notebook com código de análise, importação de dados, cálculos, tabelas e gráficos.
-- `README.md`: Este arquivo, com instruções e detalhes.
-- Gráficos gerados:
-  - `grafico_faturamento_total_loja.png`
-  - `grafico_barras_faturamento_cidade.png`
-  - `grafico_barras_faturamento_tipo_pagamento.png`
-  - `grafico_barras_vendas_categoria.png`
-  - `grafico_barras_avaliacao_compra.png`
-  - `grafico_pizza_produtos_destaque.png`
-  - `grafico_pizza_produtos_destaque_local_compra_cores_diferentes.png`
-
-**Observação:**  
-Os dados são carregados diretamente de URLs públicas, sem necessidade de arquivos locais.
+- `Readme.md`: Este arquivo, com instruções e detalhes.
 
 ---
 
